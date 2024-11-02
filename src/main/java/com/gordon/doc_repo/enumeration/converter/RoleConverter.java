@@ -14,7 +14,7 @@ public class RoleConverter implements AttributeConverter<Authority, String> {
 	public String convertToDatabaseColumn(Authority authority) {
 		// TODO Auto-generated method stub
 		if(authority ==null) {
-			return null;
+			return null; 
 		}
 		return authority.getValue();
 	}

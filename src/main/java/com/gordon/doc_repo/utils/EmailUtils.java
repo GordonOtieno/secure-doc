@@ -14,11 +14,11 @@ public class EmailUtils {
 	}
 
 	public static String getverificationUrl(String host, String token) {
-		return "verify/account?token="+token;
+		return host+"/verify/account?token="+token;
 	}
    
 	public static String getResetPasswordUrl(String host, String token) {
-		return "verify/password?token="+token;
+		return host+"/verify/password?token="+token;
 	}
 
 }

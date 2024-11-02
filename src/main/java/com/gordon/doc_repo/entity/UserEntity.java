@@ -11,6 +11,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
+import jakarta.persistence.Lob;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
@@ -47,7 +48,9 @@ public class UserEntity extends Auditable {
 	private boolean nfa;
 	@JsonIgnore
 	private String qrCodeSecret;
-	@Column(columnDefinition = "text")
+//	@Column(columnDefinition = "text")
+//	private String qrCodeImageUrl;
+	@Lob
 	private String qrCodeImageUrl;
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinTable(name = "user_roles", joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "id"))

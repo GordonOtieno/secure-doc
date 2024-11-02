@@ -9,7 +9,6 @@ public class DocumentRepoApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(DocumentRepoApplication.class, args);
 	}
-
 }
 
 //https://youtu.be/a49JO1WjJSs?t=8279
