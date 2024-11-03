@@ -20,6 +20,7 @@ import jakarta.persistence.PrePersist;
 import jakarta.persistence.PreUpdate;
 import jakarta.persistence.SequenceGenerator;
 import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -35,11 +36,11 @@ public abstract class Auditable {
 	@Column(name="id", updatable = false)
 	private Long Id;
 	private String referenceId = new AlternativeJdkIdGenerator().generateId().toString();
-	@NotEmpty
+	@NotNull
 	private Long createdBy;
-	@NotEmpty
-	private Long updatedBy;
-	@NotEmpty
+	@NotNull
+    private Long updatedBy;
+	@NotNull
 	@CreatedDate
 	@Column(name = "created_at", nullable = false, updatable = false)
 	private LocalDateTime createdAt;

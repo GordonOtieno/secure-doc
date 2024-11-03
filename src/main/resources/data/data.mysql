@@ -1,0 +1,29 @@
+INSERT INTO users (
+    id,
+    user_id,
+    first_name,
+    last_name,
+    email,
+    phone,
+    bio,
+    reference_id,
+    image_url,
+    created_by,
+    updated_by,
+    created_at,
+    updated_at
+) VALUES (
+    0,
+    UUID(),                            
+    'John',                          
+    'Doe',                            
+    'john.doe@example.com',            
+    '1234567890',                       
+    'Sample bio',                      
+    UUID(),                           
+    'https://example.com/profile.jpg', 
+    0,                                 
+    0,
+    now(),
+    now()                            
+);

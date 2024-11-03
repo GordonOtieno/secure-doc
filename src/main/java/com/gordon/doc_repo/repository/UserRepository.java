@@ -10,6 +10,6 @@ import com.gordon.doc_repo.entity.UserEntity;
 @Repository
 public interface UserRepository extends JpaRepository<UserEntity, Long> {
 	Optional<UserEntity> findByEmailIgnoreCase(String email);
-	Optional<UserEntity> findByUserId(Long userId);
+	Optional<UserEntity> findByUserId(String userId);
 
 }
