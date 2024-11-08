@@ -38,7 +38,7 @@ public class EmailServiceImpl implements EmailService {
         try {
             var message = new SimpleMailMessage();
             message.setSubject(NEW_USER_ACCOUNT_VERIFICATION);
-            message.setFrom(fromEmail);
+           // message.setFrom(fromEmail);
             message.setTo(email);
             message.setText(EmailUtils.getEmailMessage(name, host, token));
             sender.send(message);

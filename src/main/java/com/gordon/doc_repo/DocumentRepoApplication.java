@@ -21,22 +21,22 @@ public class DocumentRepoApplication {
 		SpringApplication.run(DocumentRepoApplication.class, args);
 	}
 	
-	@Bean
-	CommandLineRunner CommandLineRunner (RoleReository roleReository) {
-		return args-> {
-			RequestContext.setUserId(0L);
-			var userRole = new RoleEntity();
-			userRole.setName(Authority.USER.name());
-			userRole.setAuthorities(Authority.USER);
-			roleReository.save(userRole);
-			
-			var adminRole = new RoleEntity();
-			adminRole.setName(Authority.ADMIN.name());
-			adminRole.setAuthorities(Authority.ADMIN);
-			roleReository.save(adminRole);
-			RequestContext.start();
-		};
-	}
+//	@Bean
+//	CommandLineRunner CommandLineRunner (RoleReository roleReository) {
+//		return args-> {
+//			RequestContext.setUserId(0L);
+//			var userRole = new RoleEntity();
+//			userRole.setName(Authority.USER.name());
+//			userRole.setAuthorities(Authority.USER);
+//			roleReository.save(userRole);
+//			
+//			var adminRole = new RoleEntity();
+//			adminRole.setName(Authority.ADMIN.name());
+//			adminRole.setAuthorities(Authority.ADMIN);
+//			roleReository.save(adminRole);
+//			RequestContext.start();
+//		};
+//	}
 }
 
 //https://youtu.be/a49JO1WjJSs?t=15658

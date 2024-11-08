@@ -42,9 +42,9 @@ spring:
       max-request-size: 100MB
   mail:
     host: smtp.gmail.com
-    port: 587  #589
+    port: 589  #589
     username: otienogordon95@gmail.com
-    password: Otieno@95
+    password: Otieno@95!
     default-encoding: UTF-8
     properties:
       mail:

@@ -11,7 +11,11 @@ INSERT INTO users (
     created_by,
     updated_by,
     created_at,
-    updated_at
+    updated_at,
+    account_non_expiry,
+    account_non_locked,
+    enable,
+   nfa   -- not fully Authorized
 ) VALUES (
     0,
     UUID(),                            
@@ -25,5 +29,9 @@ INSERT INTO users (
     0,                                 
     0,
     now(),
-    now()                            
+    now(),
+    true,
+    true,
+    false,
+    true                     
 );

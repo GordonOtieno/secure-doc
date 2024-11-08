@@ -14,7 +14,7 @@ public class UserRequest {
 	@NotEmpty(message = "First name Cannot be Empty or null")
 	private String firstname;
 	@NotEmpty(message = "Last name Cannot be Empty or null")
-	private String lastName;
+	private String lastname;
 	@NotEmpty(message = "Email Cannot be Empty or null")
 	@Email(message = "Invalid email address")
 	private String email;
